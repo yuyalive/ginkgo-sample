@@ -33,13 +33,12 @@ var _ = Describe("Person", func() {
 	})
 
 	Describe("Check Gender", func() {
-		Context("Case of male", func() {
+		Context("when the person is male", func() {
 			It("should return true", func() {
 				Expect(kaede.IsMale()).To(Equal(true))
 			})
 		})
-
-		Context("Case of famale", func() {
+		Context("When the person is female", func() {
 			It("should return false", func() {
 				Expect(nagisa.IsMale()).To(Equal(false))
 			})
@@ -47,13 +46,13 @@ var _ = Describe("Person", func() {
 	})
 
 	Describe("Check Height", func() {
-		Context("With less than 160cm", func() {
+		Context("with less than 160cm", func() {
 			It("should return true", func() {
 				Expect(nagisa.IsLess160cm()).To(Equal(true))
 			})
 		})
 
-		Context("With more than 160cm", func() {
+		Context("with more than 160cm", func() {
 			It("should return false", func() {
 				Expect(kaede.IsLess160cm()).To(Equal(false))
 			})
@@ -61,13 +60,13 @@ var _ = Describe("Person", func() {
 	})
 
 	Describe("Check Weight", func() {
-		Context("With more than 50kg", func() {
+		Context("with more than 50kg", func() {
 			It("should return true", func() {
 				Expect(kaede.IsMore50kg()).To(Equal(true))
 			})
 		})
 
-		Context("With less than 50kg", func() {
+		Context("with less than 50kg", func() {
 			It("should return true", func() {
 				Expect(nagisa.IsMore50kg()).To(Equal(false))
 			})
